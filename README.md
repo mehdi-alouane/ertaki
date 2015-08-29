@@ -1,4 +1,6 @@
-HTML and CSS template that I use for my online [resume](http://ahmadajmi.com/about/)
+HTML and CSS landing page for the Ertaki project.
+
+![screen shot 2015-08-29 at 10 04 25](https://cloud.githubusercontent.com/assets/626005/9561036/5bb739bc-4e35-11e5-865e-4dd85f65f267.png)
 
 #### Installation
 

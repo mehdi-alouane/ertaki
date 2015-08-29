@@ -7,6 +7,7 @@ var del          = require('del');
 var watch        = require('gulp-watch');
 var haml         = require('gulp-haml');
 var sass         = require('gulp-sass');
+var uglify       = require('gulp-uglify');
 var minifycss    = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync  = require('browser-sync');
@@ -38,6 +39,20 @@ gulp.task('sass', function () {
   .pipe(gulp.dest('./build/styles'));
 });
 
+
+// Lint JavaScript
+
+gulp.task('js', function(){
+  return gulp.src(
+    ['./app/js/jquery-1.11.0.js',
+    './app/js/jquery.ajaxchimp.js',
+    './app/js/jquery.ajaxchimp.langs.js',
+    './app/js/script.js'])
+    .pipe(concat('app.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js'))
+    .pipe(jshint.reporter('default'));
+});
 
 // Images Min Task
 
@@ -75,7 +90,7 @@ gulp.task('clean', function() {
 // Build
 
 gulp.task('build', ['clean'], function() {
-  runSequence('haml', 'sass', 'images');
+  runSequence('haml', 'sass', 'images', 'js');
 });
 
 
