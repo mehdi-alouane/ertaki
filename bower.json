@@ -1,0 +1,17 @@
+{
+  "name": "ertaki",
+  "homepage": "https://github.com/mehdi-alouane/ertaki",
+  "authors": [
+    "mehdi-alouane <pro4medo@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
