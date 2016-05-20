@@ -1,6 +1,8 @@
 ## Ertaki :blue_book: :closed_book: :green_book:
 HTML and CSS landing page for the Ertaki project.
->Orginaly forked from the awesome [ahmadajmi](https://github.com/ahmadajmi)
+>Orginaly forked from the awesome [ahmadajmi](https://github.com/ahmadajmi) 
+
+> :warning: Stil in heavy development process
 
 ![ertaki](https://raw.githubusercontent.com/mehdi-alouane/ertaki/master/app/images/Screenshot.png)
 
