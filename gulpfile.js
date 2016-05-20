@@ -12,6 +12,8 @@ var rename       = require('gulp-rename');
 var concat       = require('gulp-concat');
 var del          = require('del');
 var runSequence  = require('run-sequence');
+var pngquant     = require('imagemin-pngquant');
+var imagemin     = require('gulp-imagemin');
 var reload       = browserSync.reload;
 
 
@@ -48,6 +50,19 @@ gulp.task('js', function(){
 });
 */
 
+
+// Images Minify task
+gulp.task('images', function () {
+  return gulp.src('./app/images/**')
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngquant()]
+    }))
+    .pipe(gulp.dest('./build/images'));
+});
+
+
 // Watch Files & Reload
 gulp.task('serve', function() {
   browserSync.init({
@@ -67,7 +82,7 @@ gulp.task('clean', function() {
 
 // Build
 gulp.task('build', ['clean'], function() {
-  runSequence('jade', 'sass');
+  runSequence('jade', 'sass', 'images');
 });
 
 

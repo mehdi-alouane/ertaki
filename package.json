@@ -4,7 +4,9 @@
   "description": "social network for book lovers",
   "main": "index.js",
   "scripts": {
-    "build" : "gulp build",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "serve": "gulp serve"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-jade": "^1.1.0",
     "gulp-sass": "^2.3.1",
+    "imagemin-pngquant": "^5.0.0",
     "run-sequence": "^1.2.0"
   },
   "dependencies": {
